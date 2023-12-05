@@ -1,6 +1,11 @@
 testString0 = "1aaaa3"
 testString1="ssd3esdsa34"
 
+
+def part1(sum):
+    sum=loopThroughList("input1.txt",sum)
+    return sum
+
 def listToSingleNumber(intList):
     return (intList[0]*10)+intList[1]
 
@@ -32,5 +37,5 @@ def getintList(stringToTest):
 
 if __name__ == '__main__':
     sum=0
-    sum=loopThroughList("input1.txt",sum)
+    sum=part1(sum)
     print(sum)
