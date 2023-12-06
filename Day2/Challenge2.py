@@ -34,22 +34,23 @@ def check_if_valid_game(row):
     else:
         return 0
 
+
+def get_lowest_cubes_count(row):
+    row=row.rstrip('\n')
+
+    
 def readFile(fileLocation):
     game_counter=0
     with open(fileLocation, 'r') as fileobj:
         for row in fileobj:
             game_counter=game_counter+check_if_valid_game(row)
             
-                
-            
-    print(game_counter)
+    print("Part 1: "+str(game_counter))
 
 
 
 
 if __name__ == '__main__':
-    red_cubes=12
-    green_cubes=13
-    blue_cubes=14
+    
     readFile("input1.txt")
     
