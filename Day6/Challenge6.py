@@ -32,11 +32,27 @@ if __name__ == '__main__':
     
     total=1
     
+    #Part 1
     for idx,val in enumerate(timeList):
         raceLength=int(val)
         recordDistance=int(distList[idx])
         total=total*calcNumWaysToBeatRecord(raceLength, recordDistance)
     
-    print(total)
+    print("Part 1 Solution: "+str(total))
+    
+    #Part 2
+    timeStr=timeStr.replace("Time:","")
+    timeStr=timeStr.replace(" ","")
+    
+    distStr=distStr.replace("Distance:","")
+    distStr=distStr.replace(" ","")
+    
+    raceLength=int(timeStr)
+    recordDistance=int(distStr)
+    
+    partTwoAnswer=calcNumWaysToBeatRecord(raceLength,recordDistance)
+    print("Part 1 Solution: "+str(partTwoAnswer))
+    
+    
 
 
